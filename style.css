@@ -1,0 +1,137 @@
+    body {
+      margin: 0;
+      font-family: 'Spectral', serif;
+      background-color: #1e1e1e;
+      background-image: url('images/Krypticc.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #646464;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-header {
+      position: relative;
+      background-color: #000;
+      color: #646464;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .back-button {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9100bd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .back-button:hover {
+      text-decoration: underline;
+    }
+    
+    .bottom-header {
+      background: #9100bd;
+      color: #000;  
+      display: flex;
+      align-items: center;  
+      justify-content: center;
+      padding: 2px 10px;     
+      height: auto;
+      min-height: 0px;
+      line-height: 1;
+    }
+
+    main {
+      padding: 2rem;
+      min-height: 150vh;
+    }
+
+    footer {
+      background-color: #000;
+      color: #646464;
+      text-align: left;
+      padding: 1rem;
+      position: relative;
+      text-decoration: none;  
+      bottom: 0;
+      width: 100%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;      
+        padding: 10px; 
+      }
+    
+      .button-title {
+        font-size: 0.95rem; 
+      }
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #1e1e1e;
+      border: 2px solid #9100bd;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      text-decoration: none;  
+      color: inherit;          
+    }
+
+    .button:hover {
+      opacity: 1;
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .button img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #000;
+      object-fit: contain;
+    }
+
+    .button-title {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .invisible {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .translucent-box {
+      background-color: rgba(0, 0, 0, 0.75); 
+      color: #646464;                        
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 600px;                    
+      margin: 20px auto;   
+      backdrop-filter: blur(5px);  
+    }
+
+    .indented {
+      text-indent: 2em;
+    }
